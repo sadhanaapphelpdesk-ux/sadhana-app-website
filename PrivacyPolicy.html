@@ -1,95 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Sadhana</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        h1, h2 {
-            color: #111;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-        }
-        .container {
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .last-updated {
-            color: #666;
-            font-size: 0.9em;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy — Sadhana</title>
+  <style>
+    body {font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; margin: 0; background: #f7fafc; color: #0f172a;}
+    .container {max-width: 900px; margin: 40px auto; padding: 28px; background: #fff; border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);}
+    h1,h2,h3 {color: #0b2540;}
+    h1 {font-size: 30px; margin-bottom: 6px; text-align:center;}
+    p {line-height: 1.7; color: #374151;}
+    ul {margin-left: 20px;}
+    .muted {color: #6b7280; font-size: 13px; text-align:center; display:block; margin-bottom: 20px;}
+    .section {margin-top: 20px;}
+    .note {background: #fffbeb; border-left: 4px solid #f59e0b; padding: 10px; border-radius: 6px; margin: 12px 0;}
+    .button-row {display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap; justify-content:center;}
+    .button-row a {
+      background: linear-gradient(135deg, #f59e0b, #f97316);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 15px;
+      box-shadow: 0 4px 10px rgba(249, 115, 22, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+      min-width: 200px;
+    }
+    .button-row a:hover {
+      transform: scale(1.04);
+      box-shadow: 0 6px 14px rgba(249, 115, 22, 0.5);
+    }
+    footer {margin-top: 28px; font-size: 13px; color: #6b7280; text-align:center;}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Privacy Policy for Sadhana</h1>
-        <p class="last-updated"><strong>Last Updated:</strong> August 26, 2025</p>
+  <div class="container">
+    <h1>Privacy Policy for Sadhana</h1>
+    <span class="muted"><strong>Last Updated:</strong> September 17, 2025</span>
 
-        <p>Welcome to Sadhana ("we," "us," or "our"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the "App"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the application.</p>
+    <p>Welcome to <strong>Sadhana</strong> (“we,” “us,” or “our”). Your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our mobile application (the “App”). By using Sadhana, you agree to this Privacy Policy. If you do not agree, please discontinue use of the App.</p>
 
-        <h2>1. COLLECTION OF YOUR INFORMATION</h2>
-        <p>We may collect information about you in a variety of ways. The information we may collect via the App depends on the content and materials you use, and includes:</p>
-        
-        <h3>Personal Data</h3>
-        <p>While using our App, we do not require you to provide personally identifiable information such as your name, shipping address, email address, or telephone number. All user-created content is stored locally on your device.</p>
-        
-        <h3>User-Created Content</h3>
-        <p>We collect and store the mantras that you manually add to the application. This data is stored locally on your device and is not transmitted to our servers unless you use features that require cloud synchronization, which would be explicitly stated.</p>
+    <h2>1. TYPES OF USERS</h2>
+    <p>You can use Sadhana in three different ways:</p>
+    <ul>
+      <li><strong>Guest Users:</strong> No sign-in required. All data remains on your device.</li>
+      <li><strong>Free Login Users:</strong> Sign in with Firebase Authentication to sync purchases and (where supported) data across devices.</li>
+      <li><strong>Pro Users:</strong> Unlock premium features through a one-time purchase (no recurring subscription).</li>
+    </ul>
 
-        <h3>Derivative Data</h3>
-        <p>Information our servers do not automatically collect, such as your IP address, browser type, operating system, access times, and the pages you have viewed directly before and after accessing the App. This app is designed to function primarily offline.</p>
-        
-        <h3>Data From Third-Party Services</h3>
-        <p>Our App uses third-party services for in-app purchases and AI features:</p>
-        <ul>
-            <li><strong>RevenueCat:</strong> To manage "Sadhana Pro" subscriptions, we use RevenueCat. RevenueCat may collect device and purchase data to validate and restore purchases. We do not receive your personal payment details (like credit card numbers). You can view RevenueCat's privacy policy for more information.</li>
-            <li><strong>Google's Gemini API:</strong> For the AI-powered mantra search feature, your search queries are sent to Google's Gemini API to generate results. We do not include any personal identifiers in these requests. Google's handling of data is governed by their own privacy policy.</li>
-        </ul>
+    <h2>2. INFORMATION WE COLLECT</h2>
+    <h3>Guest Users</h3>
+    <p>No personal data is collected. All mantras, sessions, and preferences are stored locally on your device.</p>
 
-        <h2>2. USE OF YOUR INFORMATION</h2>
-        <p>Having accurate information permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the App to:</p>
-        <ul>
-            <li>Manage your "Sadhana Pro" subscription and restore purchases.</li>
-            <li>Provide AI-generated mantra suggestions based on your search queries.</li>
-            <li>Improve the functionality and user experience of the App.</li>
-            <li>Monitor and analyze usage and trends to improve your experience with the App.</li>
-        </ul>
+    <h3>Free Login Users</h3>
+    <p>When you create an account or sign in using Firebase Authentication, we collect:</p>
+    <ul>
+      <li>Your email address (or other login credential if using third-party login such as Google Sign-In)</li>
+      <li>Authentication token to maintain your session</li>
+    </ul>
+    <p>This information is used solely for authentication and to restore your purchases across devices.</p>
 
-        <h2>3. DISCLOSURE OF YOUR INFORMATION</h2>
-        <p>We do not sell, trade, or otherwise transfer your information to outside parties. Your data is your own. The only instances where data is shared are with the third-party services mentioned above (RevenueCat and Google) as an essential part of the App's functionality.</p>
+    <h3>Pro Users</h3>
+    <p>When you purchase the Pro version:</p>
+    <ul>
+      <li>We do not collect or store your payment information</li>
+      <li>Payments are processed by Google Play or Apple App Store</li>
+      <li>We use RevenueCat to validate and manage purchase status</li>
+    </ul>
 
-        <h2>4. SECURITY OF YOUR INFORMATION</h2>
-        <p>We use administrative, technical, and physical security measures to help protect your information. While we have taken reasonable steps to secure the data you provide to us, please be aware that no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.</p>
+    <h3>User-Created Content</h3>
+    <p>For all users, we store the following data locally on your device:</p>
+    <ul>
+      <li>Mantras you manually add</li>
+      <li>Meditation session statistics and streaks</li>
+      <li>Theme and language preferences</li>
+      <li>Custom meditation goals</li>
+    </ul>
 
-        <h2>5. POLICY FOR CHILDREN</h2>
-        <p>We do not knowingly solicit information from or market to children under the age of 13. If you become aware of any data we have collected from children under age 13, please contact us using the contact information provided below.</p>
+    <h3>File Access and Backup</h3>
+    <p>We use your device’s file picker only to import JSON backup files that you select. We do not access your photos, videos, or other media files.</p>
 
-        <h2>6. YOUR PRIVACY RIGHTS</h2>
-        <p>You have the right to:</p>
-        <ul>
-            <li>Access the mantras you have saved in the app at any time.</li>
-            <li>Delete any mantra you have added to the app.</li>
-            <li>If you are a resident of the European Economic Area (EEA) or the UK, you have certain data protection rights, covered by GDPR.</li>
-        </ul>
+    <h3>Data From Third-Party Services</h3>
+    <ul>
+      <li>Firebase Authentication – for account creation and login (<a href="https://firebase.google.com/support/privacy">Firebase Privacy Policy</a>)</li>
+      <li>RevenueCat – to validate and manage purchases (<a href="https://www.revenuecat.com/privacy">RevenueCat Privacy Policy</a>)</li>
+      <li>Google’s Gemini API – to process AI-powered mantra searches (Pro feature) (<a href="https://policies.google.com/privacy">Google Privacy Policy</a>)</li>
+    </ul>
 
-        <h2>7. CHANGES TO THIS PRIVACY POLICY</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Last Updated" date of this Privacy Policy. You are encouraged to periodically review this Privacy Policy to stay informed of our updates.</p>
+    <h2>3. HOW WE USE YOUR INFORMATION</h2>
+    <ul>
+      <li>Authenticate accounts and maintain secure logins</li>
+      <li>Validate and restore your one-time purchase</li>
+      <li>Provide AI-powered mantra suggestions (Pro feature)</li>
+      <li>Track meditation statistics and progress</li>
+      <li>Enable local backups and data export</li>
+      <li>Improve app functionality and user experience</li>
+    </ul>
 
-        <h2>8. CONTACT US</h2>
-        <p>If you have questions or comments about this Privacy Policy, please contact us at:</p>
-        <p>sadhanaapphelpdesk@gmail.com</p>
+    <h2>4. DATA STORAGE AND SECURITY</h2>
+    <p>Guest data is stored only on your device.</p>
+    <p>Login user authentication data is securely managed by Firebase.</p>
+    <p>Purchase validation data is securely managed by RevenueCat and the app stores.</p>
+    <p>We implement reasonable security measures, but no system is 100% secure. Users are responsible for backing up data regularly.</p>
+
+    <h2>5. DISCLOSURE OF YOUR INFORMATION</h2>
+    <p>We do not sell, trade, or rent your information. Data is shared only with trusted third parties (Firebase, RevenueCat, Google Gemini API) to deliver essential app functionality.</p>
+
+    <h2>6. YOUR RIGHTS</h2>
+    <ul>
+      <li>Access, edit, or delete your meditation data anytime</li>
+      <li>Request account deletion for login users (removes authentication data from Firebase)</li>
+      <li>Export your data using backup features</li>
+      <li>Restore your one-time purchase on any device using the same app store account</li>
+      <li>Residents of the EEA, UK, or California may have additional rights under GDPR or CCPA, including requesting data deletion or portability.</li>
+    </ul>
+
+    <h2>7. CHILDREN’S PRIVACY</h2>
+    <p>Our App is not directed to children under 13, and we do not knowingly collect their information. If you believe we have data about a child under 13, contact us to remove it.</p>
+
+    <h2>8. REFUND POLICY</h2>
+    <p>All payments and refunds are handled by the app stores:</p>
+    <div class="button-row">
+      <a href="https://support.google.com/googleplay/answer/2479637" target="_blank">Request Google Play Refund</a>
+      <a href="https://reportaproblem.apple.com/" target="_blank">Request Apple Refund</a>
     </div>
+    <p>Because we do not process payments directly, we cannot issue refunds ourselves.</p>
+
+    <h2>9. BACKUP RECOMMENDATION & UPDATES</h2>
+    <p>Some updates may change how data is stored. We strongly recommend creating a backup of your mantras and journal entries before updating the app.</p>
+    <p>We will notify users inside the app if an update could affect locally stored data. We are not responsible for data loss if a user chooses not to back up before updating.</p>
+
+    <h2>10. LIMITATION OF LIABILITY</h2>
+    <p>We are not responsible for data loss caused by device damage, uninstallation, or user actions. Please back up your data regularly if it is important to you.</p>
+
+    <h2>11. INTERNATIONAL USERS</h2>
+    <p>Your data may be processed and stored by Firebase, RevenueCat, and Google on servers located in various countries. These providers comply with international data protection standards.</p>
+
+    <h2>12. CHANGES TO THIS POLICY</h2>
+    <p>We may update this Privacy Policy periodically. The updated version will be indicated by the “Last Updated” date above. Continued use of the App means you accept the updated policy.</p>
+
+    <h2>13. GOVERNING LAW</h2>
+    <p>This Privacy Policy is governed by the laws of <strong>India</strong>, and any disputes will be subject to the courts of <strong>Ranchi, India</strong>.</p>
+
+    <h2>14. CONTACT US</h2>
+    <p>Email: <a href="mailto:sadhanaapphelpdesk@gmail.com">sadhanaapphelpdesk@gmail.com</a><br>
+    Location: <em>Ranchi, India</em></p>
+
+    <footer>
+      <p>© 2025 Sadhana. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
-
