@@ -4,112 +4,238 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sadhana - Your Modern Mantra Companion</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
+        /* Custom scrollbar for aesthetics (Using the Gold Accent) */
+        body::-webkit-scrollbar {
+            width: 8px;
         }
-        .header {
-            background-color: #fff;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        body::-webkit-scrollbar-thumb {
+            background-color: #FFD700; /* sadhana-accent */
+            border-radius: 4px;
         }
-        .header h1 {
-            margin: 0;
-            color: #111;
+        body::-webkit-scrollbar-track {
+            background-color: #3A0000; /* sadhana-dark */
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 25px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #111;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-        }
-        .feature-list {
-            list-style: none;
-            padding: 0;
-        }
-        .feature-list li {
-            margin-bottom: 15px;
-            font-size: 1.1em;
-        }
-        .feature-list strong {
-            color: #d35400; /* Saffron color */
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #d35400;
-            color: #fff;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        .footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            color: #777;
-            font-size: 0.9em;
-        }
-        .footer a {
-            color: #555;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
+        /* Enable smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // NEW THEME COLORS BASED ON SCREENSHOT
+                        'sadhana-accent': '#FFD700', // Bright Gold/Yellow for highlights
+                        'sadhana-bg-main': '#6B0000', // Deep Maroon/Red (Body Background)
+                        'sadhana-dark': '#3A0000', // Darker Maroon (Header/Footer/Card Background)
+                        'sadhana-delete': '#FF4500', // Orange-Red for warnings
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <div class="header">
-        <h1>Sadhana</h1>
-        <p>Your Modern Mantra Companion</p>
-    </div>
+<!-- Default text color is now light for better contrast against the dark background -->
+<body class="font-sans bg-sadhana-bg-main text-gray-100 antialiased">
 
-    <div class="container">
-        <h2>Deepen Your Spiritual Practice</h2>
-        <p>Sadhana is a beautifully simple app designed to help you focus on your mantra meditation without distraction. Keep track of your chants, discover new mantras, and customize your experience to create a peaceful and personal practice space.</p>
-
-        <h2>Features</h2>
-        <ul class="feature-list">
-            <li><strong>Mantra Counter:</strong> Easily count your mantra repetitions with a simple tap, helping you stay focused and meet your goals.</li>
-            <li><strong>Custom Mantra List:</strong> Add, manage, and select from your own personal list of mantras.</li>
-            <li><strong>AI Mantra Discovery (Pro):</strong> Feeling curious? Use the power of AI to discover new mantras related to your intentions or interests.</li>
-            <li><strong>Beautiful Themes (Pro):</strong> Customize the look and feel of the app with a selection of elegant and calming themes to match your mood.</li>
-            <li><strong>Bilingual Support (Pro):</strong> Seamlessly switch between English and Hindi to use the app in the language you're most comfortable with.</li>
-        </ul>
-
-        <h2>Why Choose Sadhana?</h2>
-        <p>In a world full of digital noise, Sadhana provides a quiet corner. Our minimalist design removes clutter, allowing you to concentrate on what truly matters: your practice. Whether you are a beginner or have been chanting for years, Sadhana is the perfect tool to support your spiritual journey.</p>
-
-        <div style="text-align: center;">
-            <a href="[YOUR_APP_STORE_LINK_HERE]" class="cta-button">Download on the App Store</a>
+    <!-- Header & Hero Section (Sticky Navigation) -->
+    <header class="bg-sadhana-dark shadow-xl sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold text-sadhana-accent tracking-tight hover:text-white transition duration-200">Sadhana</a>
+            <!-- Desktop Navigation Links for SPA -->
+            <nav class="hidden md:block space-x-6 text-sm font-medium">
+                <a href="#features" class="text-gray-300 hover:text-sadhana-accent transition duration-150">Features</a>
+                <a href="#privacy" class="text-gray-300 hover:text-sadhana-accent transition duration-150">Privacy</a>
+                <a href="#delete-account" class="text-gray-300 hover:text-sadhana-accent transition duration-150">Delete Account</a>
+                <a href="[YOUR_APP_STORE_LINK_HERE]" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-bold rounded-full shadow-md text-sadhana-dark bg-sadhana-accent hover:bg-yellow-400 transition duration-300">
+                    Download App
+                </a>
+            </nav>
+            <!-- Mobile Download Button -->
+            <a href="[YOUR_APP_STORE_LINK_HERE]" class="md:hidden inline-flex items-center px-4 py-2 border border-transparent text-sm font-bold rounded-full shadow-md text-sadhana-dark bg-sadhana-accent hover:bg-yellow-400 transition duration-300">
+                Download
+            </a>
         </div>
-    </div>
+    </header>
 
-    <div class="footer">
-        <p>&copy; 2025 Sadhana App. All rights reserved.</p>
-        <p>
-            <!-- UPDATED LINKS HERE -->
-            <a href="Privacy20Policy.html">Privacy Policy</a> | 
-            <a href="AIDisclaimer.html">AI Disclaimer</a>
-        </p>
-    </div>
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Hero Banner -->
+        <section class="bg-sadhana-dark rounded-xl shadow-xl p-8 md:p-12 text-center my-10">
+            <h2 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">Your Modern Mantra Companion</h2>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-sadhana-accent font-semibold">Deepen your spiritual practice with a beautifully simple, distraction-free app.</p>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-sadhana-dark text-white rounded-xl shadow-2xl p-8 md:p-12 text-center my-10 border-4 border-sadhana-accent">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-sadhana-accent">Ready to find your focus?</h2>
+            <p class="text-lg mb-8 opacity-90">Download Sadhana today and take the first step towards a calmer, more mindful practice.</p>
+            <a href="[YOUR_APP_STORE_LINK_HERE]" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-full shadow-xl text-sadhana-dark bg-sadhana-accent hover:bg-yellow-300 transition duration-300 transform hover:scale-105">
+                Download Now for iOS & Android
+            </a>
+        </section>
+        
+        <!-- Features Section (Landing Page Content) -->
+        <section id="features" class="my-16 pt-8">
+            <h2 class="text-4xl font-bold text-center text-sadhana-accent mb-12 border-b-2 border-sadhana-accent pb-3">Features That Support Your Practice</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Feature 1: Mantra Counter -->
+                <div class="bg-sadhana-dark p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-sadhana-accent">
+                    <div class="text-3xl text-sadhana-accent mb-3">🔢</div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Distraction-Free Counting</h3>
+                    <p class="text-gray-300">Easily count your mantra repetitions with a simple tap, keeping your focus where it belongs: on your chant. **(Free)**</p>
+                </div>
+                
+                <!-- Feature 2: Custom Mantra List -->
+                <div class="bg-sadhana-dark p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-sadhana-accent">
+                    <div class="text-3xl text-sadhana-accent mb-3">📝</div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Personalized Mantra List</h3>
+                    <p class="text-gray-300">Add, manage, and select from your own personal list of favorite and custom mantras.</p>
+                </div>
+
+                <!-- Feature 3: Beautiful Themes (Pro) -->
+                <div class="bg-sadhana-dark p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-white">
+                    <div class="text-3xl text-white mb-3">🎨</div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Elegant Themes</h3>
+                    <p class="text-gray-300">Customize the look and feel of the app with a selection of elegant and calming themes to match your mood. <span class="text-sadhana-accent font-bold">(Pro Feature)</span></p>
+                </div>
+                
+                <!-- Feature 4: Statistics & Goals (Pro) -->
+                <div class="bg-sadhana-dark p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-white">
+                    <div class="text-3xl text-white mb-3">📈</div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Advanced Statistics & Goals</h3>
+                    <p class="text-gray-300">Track your daily streaks, total chants, and set personalized repetition goals for consistency. <span class="text-sadhana-accent font-bold">(Pro Feature)</span></p>
+                </div>
+
+                 <!-- Feature 5: Bilingual Support (Pro) -->
+                <div class="bg-sadhana-dark p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-white">
+                    <div class="text-3xl text-white mb-3">🌐</div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Bilingual Support</h3>
+                    <p class="text-gray-300">Seamlessly switch between English and Hindi to use the app in the language you're most comfortable with. <span class="text-sadhana-accent font-bold">(Pro Feature)</span></p>
+                </div>
+
+                <!-- Feature 6: Data Security -->
+                <div class="bg-sadhana-dark p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-sadhana-accent">
+                    <div class="text-3xl text-sadhana-accent mb-3">🔒</div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Privacy First</h3>
+                    <p class="text-gray-300">Your practice is private. Guest data is stored locally. Login data is secured by Firebase. We do not sell your information.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- Privacy Policy Section (Existing) --- -->
+        <div id="privacy" class="max-w-4xl mx-auto my-20 pt-8 p-6 sm:p-8 bg-sadhana-dark rounded-2xl shadow-2xl border-t-8 border-sadhana-accent">
+            <div class="text-center mb-8">
+                <h2 class="text-4xl font-bold text-sadhana-accent">Privacy Policy for Sadhana</h2>
+                <span class="mt-2 text-sm text-gray-400 block"><strong>Last Updated:</strong> September 15, 2025</span>
+            </div>
+        
+            <p class="mb-6 leading-relaxed text-gray-300">Welcome to <strong>Sadhana</strong> (“we,” “us,” or “our”). Your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our mobile application (the “App”).</p>
+        
+            <!-- Section: Types of Users -->
+            <section class="mb-8">
+                <h3 class="text-2xl font-semibold text-white mb-3 border-b pb-2">1. Types of Users</h3>
+                <ul class="list-disc ml-6 space-y-2 text-gray-300">
+                  <li><strong>Guest Users:</strong> No sign-in required. All data remains on your device.</li>
+                  <li><strong>Free Login Users:</strong> Sign in with Firebase Authentication to sync purchases and data across devices.</li>
+                  <li><strong>Pro Users:</strong> Unlock premium features through a one-time purchase.</li>
+                </ul>
+            </section>
+            
+            <!-- Section: Information We Collect -->
+            <section class="mb-8">
+                <h3 class="text-2xl font-semibold text-white mb-3 border-b pb-2">2. Information We Collect</h3>
+        
+                <h4 class="text-xl font-medium text-sadhana-accent mt-4 mb-2">Guest Users</h4>
+                <p class="text-gray-300">No personal data is collected. All mantras, sessions, and preferences are stored locally on your device.</p>
+        
+                <h4 class="text-xl font-medium text-sadhana-accent mt-4 mb-2">Free Login Users</h4>
+                <p class="text-gray-300">When you create an account or sign in using Firebase Authentication, we collect your email address (or other login credential) and an authentication token. This is used solely for authentication and to restore your purchases across devices.</p>
+        
+                <h4 class="text-xl font-medium text-sadhana-accent mt-4 mb-2">Data From Third-Party Services</h4>
+                <ul class="list-disc ml-6 space-y-2 text-gray-300">
+                    <li><strong>Firebase Authentication</strong> – for account creation and login (<a href="https://firebase.google.com/support/privacy" target="_blank" class="text-sadhana-accent hover:underline">Privacy Policy</a>)</li>
+                    <li><strong>RevenueCat</strong> – to validate and manage purchases (<a href="https://www.revenuecat.com/privacy" target="_blank" class="text-sadhana-accent hover:underline">Privacy Policy</a>)</li>
+                </ul>
+            </section>
+        
+            <!-- Section: Use of Information & Contact -->
+            <section class="mb-8">
+                <h3 class="text-2xl font-semibold text-white mb-3 border-b pb-2">3. Use of Information & Contact</h3>
+                <p class="text-gray-300 mb-4">We use your information only to provide and improve the App's core functionality, such as tracking statistics and restoring purchases.</p>
+                
+                <h4 class="text-xl font-medium text-sadhana-accent mt-4 mb-2">Contact Us</h4>
+                <p class="text-gray-300">Email: <a href="mailto:sadhanaapphelpdesk@gmail.com" class="text-sadhana-accent font-medium hover:underline">sadhanaapphelpdesk@gmail.com</a><br>
+                Location: <em>Ranchi,, India</em></p>
+            </section>
+        </div>
+
+        <!-- NOTE: The AI Disclaimer section is removed here -->
+
+        <!-- --- Account Deletion Section (Existing) --- -->
+        <div id="delete-account" class="max-w-4xl mx-auto my-20 pt-8 p-6 sm:p-8 bg-sadhana-dark rounded-2xl shadow-2xl border-t-8 border-sadhana-delete">
+            <header class="text-center mb-8">
+                <h2 class="text-4xl font-bold text-sadhana-delete">Account Deletion Request</h2>
+                <p class="mt-2 text-sm text-gray-400 block"><strong>Last Updated:</strong> August 26, 2025</p>
+            </header>
+    
+            <div class="p-4 rounded-lg bg-sadhana-delete border border-red-900 mb-6">
+                <p class="font-semibold text-white">🛑 This Action is Permanent</p>
+                <p class="text-gray-100 text-sm mt-1">Deleting your account is irreversible. All associated data will be permanently removed.</p>
+            </div>
+    
+            <p class="mb-8 leading-relaxed text-gray-300">You can permanently delete your SadhanaApp account and all associated data directly from within the application. This action is irreversible and cannot be undone.</p>
+    
+            <!-- Steps to Delete -->
+            <section class="mb-8">
+                <h3 class="text-2xl font-semibold text-white mb-4 border-b pb-2">Steps to Delete Your Account (In-App)</h3>
+                <ol class="list-decimal ml-6 space-y-3 text-gray-300">
+                    <li class="p-2 bg-sadhana-bg-main rounded-lg">Open the **SadhanaApp** on your device.</li>
+                    <li class="p-2 bg-sadhana-bg-main rounded-lg">Log in to the account you wish to delete.</li>
+                    <li class="p-2 bg-sadhana-bg-main rounded-lg">Navigate to the **"Profile"** tab.</li>
+                    <li class="p-2 bg-sadhana-bg-main rounded-lg">Tap the prominent **"Delete Account"** button.</li>
+                    <li class="p-2 bg-sadhana-bg-main rounded-lg">Confirm the deletion by entering your password/credentials.</li>
+                    <li class="p-2 bg-sadhana-bg-main rounded-lg">Confirm the deletion.</li>
+                </ol>
+            </section>
+    
+            <!-- Data Deleted -->
+            <section class="mb-8">
+                <h3 class="text-2xl font-semibold text-white mb-4 border-b pb-2">What Data is Deleted?</h3>
+                <p class="mb-3 text-gray-300">The following data will be **permanently removed**:</p>
+                <ul class="list-disc ml-6 space-y-2 text-gray-300">
+                    <li>Your user account (email and authentication credentials).</li>
+                    <li>Your personal chant statistics (counts, streaks, totals).</li>
+                    <li>Your saved custom mantras and private journal entries.</li>
+                </ul>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-sadhana-dark text-gray-300 py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-wrap justify-center space-x-4 text-sm font-medium">
+                <a href="#privacy" class="hover:text-sadhana-accent transition duration-150">Privacy Policy</a>
+                <span class="text-sadhana-accent">|</span>
+                <a href="#delete-account" class="hover:text-sadhana-accent transition duration-150">Account Deletion</a>
+            </div>
+            <p class="mt-4 text-xs opacity-70">&copy; 2025 Sadhana App. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- All previous JavaScript related to the Gemini API has been removed. -->
+    
 </body>
 </html>
-
-
-
