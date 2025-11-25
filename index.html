@@ -10,7 +10,7 @@
             width: 8px;
         }
         body::-webkit-scrollbar-thumb {
-            background-color: #FFD700;
+            background-color: #FF8C00;
             border-radius: 4px;
         }
         body::-webkit-scrollbar-track {
@@ -27,15 +27,15 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+            background: radial-gradient(circle at 20% 50%, rgba(255, 140, 0, 0.08) 0%, transparent 50%),
                         radial-gradient(circle at 80% 80%, rgba(255, 69, 0, 0.06) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
         
         @keyframes borderGlow {
-            0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 140, 0, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(255, 140, 0, 0.6); }
         }
         
         .glow-border {
@@ -62,7 +62,7 @@
         .glass-effect {
             background: rgba(58, 0, 0, 0.7);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 215, 0, 0.2);
+            border: 1px solid rgba(255, 140, 0, 0.2);
         }
         
         @keyframes shimmer {
@@ -71,7 +71,7 @@
         }
         
         .shimmer {
-            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 140, 0, 0.3), transparent);
             background-size: 1000px 100%;
             animation: shimmer 3s infinite;
         }
@@ -81,7 +81,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'sadhana-accent': '#FFD700',
+                        'sadhana-accent': '#FF8C00',
                         'sadhana-bg-main': '#6B0000',
                         'sadhana-dark': '#3A0000',
                         'sadhana-delete': '#FF4500',
@@ -131,6 +131,63 @@
                     <span class="px-4 py-2 bg-sadhana-dark/50 rounded-full text-sm font-medium border border-sadhana-accent/30">✨ No Ads</span>
                     <span class="px-4 py-2 bg-sadhana-dark/50 rounded-full text-sm font-medium border border-sadhana-accent/30">🔒 Private</span>
                     <span class="px-4 py-2 bg-sadhana-dark/50 rounded-full text-sm font-medium border border-sadhana-accent/30">📱 Cross-Platform</span>
+                    <span class="px-4 py-2 bg-sadhana-dark/50 rounded-full text-sm font-medium border border-sadhana-accent/30">🚪 No Login Required</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Updates Section -->
+        <section class="glass-effect rounded-2xl shadow-2xl p-8 md:p-12 my-10 relative overflow-hidden border-2 border-sadhana-accent/40">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-sadhana-accent/5 rounded-full -mr-32 -mt-32"></div>
+            <div class="relative z-10">
+                <div class="flex items-center justify-center gap-3 mb-6">
+                    <span class="text-3xl">✨</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-sadhana-accent">What's New in Latest Release</h2>
+                    <span class="text-3xl">✨</span>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-sadhana-dark/40 hover:bg-sadhana-dark/60 transition-all duration-300">
+                        <span class="text-3xl flex-shrink-0">🕉️</span>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">Mantra Management Made Easy</h4>
+                            <p class="text-gray-300 text-sm">Add or change your mantra in one place</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-sadhana-dark/40 hover:bg-sadhana-dark/60 transition-all duration-300">
+                        <span class="text-3xl flex-shrink-0">📿</span>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">Auto Mala Jap</h4>
+                            <p class="text-gray-300 text-sm">No need to tap! Set your jap speed and enjoy automatic counting with haptic feedback</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-sadhana-dark/40 hover:bg-sadhana-dark/60 transition-all duration-300">
+                        <span class="text-3xl flex-shrink-0">🌬️</span>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">New Breathing Practice</h4>
+                            <p class="text-gray-300 text-sm">Calm your mind with guided breathing sessions</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-sadhana-dark/40 hover:bg-sadhana-dark/60 transition-all duration-300">
+                        <span class="text-3xl flex-shrink-0">🌍</span>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">Multi-Language Access</h4>
+                            <p class="text-gray-300 text-sm">Meditate freely in your preferred language, all unlocked</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-sadhana-dark/40 hover:bg-sadhana-dark/60 transition-all duration-300">
+                        <span class="text-3xl flex-shrink-0">🚪</span>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">No Login Required</h4>
+                            <p class="text-gray-300 text-sm">Start your practice instantly</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-sadhana-dark/40 hover:bg-sadhana-dark/60 transition-all duration-300">
+                        <span class="text-3xl flex-shrink-0">🧘</span>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">Enhanced Meditation Experience</h4>
+                            <p class="text-gray-300 text-sm">Smoother focus, improved stability, and mindful updates</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
